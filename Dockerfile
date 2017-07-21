@@ -8,8 +8,8 @@ RUN apt-get -y update \
 		clang \
 		g++-6-multilib \
 		gcc-6-multilib \
-		g++-6-arm-linux-gnueabihf \
-		gcc-6-arm-linux-gnueabihf \
+		g++-arm-linux-gnueabihf \
+		gcc-arm-linux-gnueabihf \
 		lib32gcc-6-dev \
 		libc6-dev-x32 \
 		mingw-w64 \
