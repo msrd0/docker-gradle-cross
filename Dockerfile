@@ -6,8 +6,8 @@ RUN apt-get -y update \
 	&& apt-get -y install --no-install-recommends \
 		build-essential \
 		clang \
-		g++ \
-		gcc \
+		g++-multilib \
+		gcc-multilib \
 		g++-arm-linux-gnueabihf \
 		gcc-arm-linux-gnueabihf \
 		lib32gcc-6-dev \
