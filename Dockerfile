@@ -2,7 +2,8 @@
 FROM gradle
 
 USER root
-RUN apt-get -y update \
+RUN dpkg --add-architecture i386 \
+	&& apt-get -y update \
 	&& apt-get -y install --no-install-recommends \
 		build-essential \
 		clang \
@@ -12,6 +13,7 @@ RUN apt-get -y update \
 		gcc-arm-linux-gnueabihf \
 		lib32gcc-6-dev \
 		libc6-dev-x32 \
+		linux-libc-dev:i386 \
 		mingw-w64 \
 		sudo \
 	&& echo 'gradle ALL=(ALL) NOPASSWD: ALL' >/etc/sudoers.d/gradle \
